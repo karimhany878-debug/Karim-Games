@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Game Hub</title>
+  <link rel="stylesheet" href="hub.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">GAME HUB</div>
+    <div class="sub">مجمع ألعاب أوفلاين  نفس المجلد  بدون تحميلات</div>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <div class="title">STATE 2P</div>
+      <div class="desc">لعبة السيطرة + Multi + Upgrades + VFX + Sounds</div>
+      <div class="row">
+        <a class="btn" href="state.html">Play</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="title">CHESS (2P)</div>
+      <div class="desc">شطرنج لاعب ضد لاعب  قواعد كاملة + Undo + Flip + Promotion</div>
+      <div class="row">
+        <a class="btn" href="chess.html">Play</a>
+      </div>
+    </section>
+
+    <section class="card ghost">
+      <div class="title">Next</div>
+      <div class="desc">أي لعبة جديدة: تعمل ملف HTML/JS وتضيف Card هنا.</div>
+      <div class="row">
+        <button class="btn2" id="btnTip">How?</button>
+      </div>
+      <div class="tip" id="tip" hidden>
+        1) أنشئ <b>gameX.html</b> + <b>gameX.js</b> + <b>gameX.css</b><br/>
+        2) حط زر Back يرجع <b>index.html</b><br/>
+        3) أضف Card بنفس شكل اللي فوق
+      </div>
+    </section>
+      <section class="card">
+      <div class="title">READ</div>
+      <div class="desc">إعدادات الأذكار + اختبار نافذة Break Time + حفظ الإعدادات (Offline)</div>
+      <div class="row">
+        <a class="btn" href="read.html">Open</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('btnTip')?.addEventListener('click', ()=>{
+      const t=document.getElementById('tip');
+      t.hidden=!t.hidden;
+    });
+  </script>
+</body>
+</html>
+
+

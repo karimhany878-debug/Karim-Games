@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <title>أذكار بعد الصلاة</title>
+  <link rel="stylesheet" href="read_view.css"/>
+</head>
+<body>
+  <div id="toast" class="toast hidden"></div>
+  <header class="top">
+    <div class="bar">
+      <a class="btn" href="read.html">رجوع</a>
+      <div class="title" id="title">أذكار بعد الصلاة</div>
+      <a class="btn" href="index.html">الرئيسية</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="list"></div>
+    <div class="card" style="opacity:.9">
+      <div class="h">ملاحظة</div>
+      <div class="text" style="font-size:14px; margin-top:8px">المحتوى يعمل Offline. التقدّم محفوظ على هذا الجهاز فقط.</div>
+    </div>
+  </main>
+
+  <script>
+    window.ADH_KAR_FILE = "read_data/custom/after_prayer_custom.json";
+    window.ADH_KAR_TITLE = "أذكار بعد الصلاة";
+  </script>
+  <script src="read_view.js"></script>
+</body>
+</html>

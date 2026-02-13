@@ -1,0 +1,29 @@
+﻿# OS / Editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Build / caches
+dist/
+build/
+.cache/
+
+# Big assets (اختياري لو عندك audio packs)
+assets/audio/
+*.mp3
+*.wav
+*.m4a
+
+# Secrets
+.env

@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Settings</title>
+  <link rel="stylesheet" href="app.css"/>
+  <link rel="stylesheet" href="settings.css"/>
+</head>
+<body>
+  <div id="toast" class="toast hidden"></div>
+
+  <header class="glass top">
+    <a class="btn" href="index.html">Back</a>
+    <div class="t">SETTINGS</div>
+    <a class="btn" href="play.html">Play</a>
+  </header>
+
+  <main class="wrap">
+    <section class="glass card">
+      <div class="h">الصوت</div>
+      <div class="row">
+        <div class="k">Sound</div>
+        <label class="switch">
+          <input id="sound" type="checkbox"/>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="row">
+        <div class="k">Volume</div>
+        <input id="vol" type="range" min="0" max="1" step="0.05"/>
+      </div>
+    </section>
+
+    <section class="glass card">
+      <div class="h">Chess</div>
+      <div class="row">
+        <div class="k">Bot Delay (ms)</div>
+        <input id="chDelay" type="number" min="200" max="6000" step="100"/>
+      </div>
+      <div class="row">
+        <div class="k">Bot Strength</div>
+        <select id="chStr">
+          <option value="easy">Easy</option>
+          <option value="normal" selected>Normal</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="glass card">
+      <div class="h">READ</div>
+      <div class="row">
+        <div class="k">Break كل (دقيقة)</div>
+        <input id="breakMin" type="number" min="5" max="60" step="5"/>
+      </div>
+      <div class="row">
+        <div class="k">تفعيل Break Popup</div>
+        <label class="switch">
+          <input id="breakOn" type="checkbox"/>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="glass card">
+      <button id="save" class="btnWide">Save</button>
+      <button id="reset" class="btnWide ghost">Reset Defaults</button>
+      <div class="note">الإعدادات محفوظة Offline على نفس المتصفح.</div>
+    </section>
+  </main>
+
+  <script src="settings.js"></script>
+</body>
+</html>
+

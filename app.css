@@ -1,0 +1,81 @@
+﻿:root{
+  --bg:#070b16;
+  --panel1:rgba(22,30,54,.78);
+  --panel2:rgba(8,12,22,.55);
+  --glass:rgba(255,255,255,.06);
+  --glass2:rgba(255,255,255,.10);
+  --line:rgba(255,255,255,.12);
+  --text:rgba(255,255,255,.93);
+  --muted:rgba(255,255,255,.68);
+  --good:rgba(120,255,170,.22);
+  --bad:rgba(255,90,107,.22);
+  --shadow:0 14px 44px rgba(0,0,0,.35);
+  --r16:16px; --r18:18px; --r20:20px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  color:var(--text);
+  background:
+    radial-gradient(1100px 700px at 70% 20%, rgba(78,163,255,.12), transparent 60%),
+    radial-gradient(900px 600px at 20% 70%, rgba(255,90,107,.10), transparent 55%),
+    var(--bg);
+}
+
+.glass{
+  background:linear-gradient(180deg, var(--panel1), var(--panel2));
+  border:1px solid var(--line);
+  border-radius:var(--r18);
+  box-shadow:var(--shadow);
+  backdrop-filter: blur(8px);
+}
+
+.btn, button, select, input[type="number"]{
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.06);
+  color:var(--text);
+  padding:9px 11px;
+  border-radius:14px;
+  font-weight:950;
+  cursor:pointer;
+}
+.btn:hover, button:hover, select:hover{background:rgba(255,255,255,.10)}
+.btn.ghost, button.ghost{background:rgba(255,255,255,.03)}
+.btnWide{
+  width:100%;
+  padding:11px 12px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.08);
+  color:var(--text);
+  font-weight:980;
+  cursor:pointer;
+}
+.btnWide:hover{background:rgba(255,255,255,.12)}
+
+.pill{
+  display:flex; gap:8px; align-items:center;
+  padding:7px 9px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:14px;
+  background:rgba(255,255,255,.05);
+}
+.pill .k{font-size:12px;color:var(--muted);font-weight:900}
+.pill .v{font-weight:980}
+
+.toast{
+  position:fixed; left:12px; right:12px; top:12px;
+  max-width:900px; margin:0 auto;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(10,14,28,.92);
+  box-shadow:var(--shadow);
+  z-index:99;
+}
+.toast.good{border-color:var(--good)}
+.toast.bad{border-color:var(--bad)}
+.hidden{display:none !important}

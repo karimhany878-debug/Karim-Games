@@ -1,0 +1,91 @@
+﻿<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chess Puzzles</title>
+  <link rel="stylesheet" href="puzzles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="left">
+      <button id="btnBack">Back</button>
+      <button id="btnPrev">Prev</button>
+      <button id="btnNext">Next</button>
+      <button id="btnRetry">Retry</button>
+    </div>
+
+    <div class="mid">
+      <div class="title">CHESS PUZZLES</div>
+      <div id="sub" class="sub">...</div>
+    </div>
+
+    <div class="right">
+      <div class="pill">
+        <span>Mode</span>
+        <select id="mode">
+          <option value="classic" selected>Classic</option>
+          <option value="rush">Rush (3 strikes)</option>
+        </select>
+      </div>
+
+      <button id="btnSound">Sound: ON</button>
+      <input id="vol" type="range" min="0" max="1" step="0.05" value="0.35" />
+    </div>
+  </header>
+
+  <main class="stage">
+    <section class="boardWrap">
+      <div id="toast" class="toast hidden">...</div>
+      <canvas id="board"></canvas>
+    </section>
+
+    <aside class="panel">
+      <div class="pHead">
+        <div class="pTitle" id="pTitle">...</div>
+        <div class="pMeta" id="pMeta">...</div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><div class="k">Streak</div><div class="v" id="streak">0</div></div>
+        <div class="stat"><div class="k">Best</div><div class="v" id="best">0</div></div>
+        <div class="stat"><div class="k">Mistakes</div><div class="v" id="mist">0</div></div>
+        <div class="stat"><div class="k">Hints</div><div class="v" id="hints">0</div></div>
+        <div class="stat" id="livesBox"><div class="k">Lives</div><div class="v" id="lives">3</div></div>
+      </div>
+
+      <div class="motif">
+        <div class="k">Motif</div>
+        <div class="v" id="motif"></div>
+      </div>
+
+      <div class="actions">
+        <button id="btnHint">Hint</button>
+        <button id="btnShow">Show Move</button>
+      </div>
+
+      <div class="actions">
+        <button id="btnResetStats" class="ghost">Reset Stats</button>
+      </div>
+
+      <div class="note">
+        Hint تدريجي (مش بيفضح الحل تلقائيا). غلط = Try again.
+      </div>
+    </aside>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="card">
+      <div class="mTitle" id="mTitle">Solved</div>
+      <div class="mBody" id="mBody">...</div>
+      <div class="mRow">
+        <button id="mNext">Next</button>
+        <button id="mClose" class="ghost">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="puzzles.js"></script>
+</body>
+</html>
+

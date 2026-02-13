@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Karim Games - Play</title>
+  <link rel="stylesheet" href="app.css"/>
+  <link rel="stylesheet" href="start.css"/>
+</head>
+<body>
+  <div class="wrap">
+    <header class="glass hero">
+      <div class="brand">KARIM GAMES</div>
+      <div class="sub">Play  Offline  Local  Mobile friendly</div>
+    </header>
+
+    <main class="grid">
+      <a class="card primary" href="state.html">
+        <div class="h">STATE 2P</div>
+        <div class="p">حرب ولايات محلية  ضد صاحبك أو بوت</div>
+      </a>
+
+      <a class="card primary" href="chess.html">
+        <div class="h">CHESS</div>
+        <div class="p">VS Friend / VS Bot  تقييم أقوى</div>
+      </a>
+
+      <a class="card" href="colorwars.html">
+        <div class="h">Color Wars</div>
+        <div class="p">سلسلة انفجارات + لاعبَين أو بوت</div>
+      </a>
+
+      <a class="card" href="xo.html">
+        <div class="h">XO</div>
+        <div class="p">2P + Bot  سريع وخفيف</div>
+      </a>
+
+      <a class="card" href="chemistry.html">
+        <div class="h">معادلات الكيمياء</div>
+        <div class="p">أسئلة تدريجية  أسلوب Duolingo</div>
+      </a>
+
+      <a class="card" href="read.html">
+        <div class="h">READ</div>
+        <div class="p">قرآن  أذكار  أدعية  سنة  مفضلة وبحث</div>
+      </a>
+
+      <a class="card" href="settings.html">
+        <div class="h">SETTINGS</div>
+        <div class="p">صوت  فواصل  تفضيلات</div>
+      </a>
+
+      <a class="card" href="index.html">
+        <div class="h">رجوع</div>
+        <div class="p">الصفحة الرئيسية</div>
+      </a>
+    </main>
+
+    <div class="foot">
+      افتح دايما من <b>index.html</b> أو شغل سيرفر محلي.
+    </div>
+  </div>
+
+  <script src="sfx.js"></script>
+  <script>
+    document.addEventListener('click', (e)=>{
+      const a = e.target.closest('a,button');
+      if(!a) return;
+      if(window.SFX) SFX.play('click');
+    }, true);
+  </script>
+</body>
+</html>

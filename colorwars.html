@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <title>Color Wars</title>
+  <link rel="stylesheet" href="colorwars.css"/>
+</head>
+<body>
+
+  <!-- Menu / Start Screen -->
+  <section id="menu" class="menu">
+    <header class="menuTop">
+      <button class="iconBtn" id="btnBack" aria-label="رجوع">‹</button>
+      <div class="menuTitle">COLOR WARS</div>
+      <button class="iconBtn" id="btnFav" aria-label="مفضلة">★</button>
+    </header>
+
+    <div class="menuCard">
+      <div class="menuHint">
+        حاول تسيطر على أكبر مساحة بلونك. زوّد نقاطك بالضغط على دوائرك.
+        عند وصول الدائرة إلى <b>4 نقاط</b> يحصل انفجار وينتشر اللون.
+      </div>
+    </div>
+
+    <div class="menuCard">
+      <div class="cloud">☁</div>
+      <div class="diffTitle" id="diffLabel">سهل</div>
+
+      <div class="sliderRow">
+        <input id="diff" type="range" min="0" max="2" step="1" value="0" aria-label="الصعوبة"/>
+      </div>
+      <div class="muted">اسحب لتغيير الصعوبة</div>
+
+      <button class="bigBtn bot" id="btnBot">العب ضد الكمبيوتر</button>
+      <button class="bigBtn friend" id="btnFriend">العب ضد صديق</button>
+    </div>
+  </section>
+
+  <!-- Game Screen -->
+  <main id="game" class="game hidden">
+    <div class="side left">
+      <div class="scoreDial" id="p1Dial">
+        <div class="scoreNum" id="p1Score">0</div>
+        <div class="scoreDot red"></div>
+      </div>
+    </div>
+
+    <div class="boardWrap">
+      <div class="grid" id="grid" aria-label="لوحة اللعبة"></div>
+      <div class="status" id="status">ابدأ: كل لاعب يضع أول حركة في خانة فارغة مرة واحدة.</div>
+    </div>
+
+    <div class="side right">
+      <button class="exitDial" id="btnExit">EXIT</button>
+      <button class="gearDial" id="btnSettings" aria-label="إعدادات">⚙</button>
+      <div class="scoreDial" id="p2Dial">
+        <div class="scoreNum" id="p2Score">0</div>
+        <div class="scoreDot blue"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Settings Modal -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-label="إعدادات">
+    <div class="modalBox">
+      <div class="modalTitle">إعدادات</div>
+      <label class="row">
+        <span>صوت</span>
+        <input id="chkSound" type="checkbox" checked />
+      </label>
+      <label class="row">
+        <span>ضد الكمبيوتر (اللاعب 2)</span>
+        <input id="chkBot" type="checkbox" />
+      </label>
+
+      <div class="modalBtns">
+        <button class="btn" id="btnClose">إغلاق</button>
+        <button class="btn primary" id="btnNew">لعبة جديدة</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="sfx.js"></script>
+  <script src="colorwars.js"></script>
+</body>
+</html>

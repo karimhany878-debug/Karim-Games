@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>معادلات الكيمياء</title>
+  <link rel="stylesheet" href="chemistry.css"/>
+</head>
+<body>
+  <header class="top">
+    <button class="btn ghost" id="back">رجوع</button>
+    <div class="title">
+      <div class="h">معادلات الكيمياء</div>
+      <div class="s" id="subtitle">نظام تدريجي  مثل Duolingo</div>
+    </div>
+    <button class="btn ghost" id="reset">Reset</button>
+  </header>
+
+  <main class="wrap">
+    <section class="panel" id="home">
+      <div class="card big">
+        <div class="k">اختار مستوى</div>
+        <div class="diff">
+          <button class="pill" data-diff="easy">سهل</button>
+          <button class="pill" data-diff="med">متوسط</button>
+          <button class="pill" data-diff="hard">صعب</button>
+        </div>
+        <div class="note">
+          الترم  عادةً فيه: انحلال حراري + إحلال بسيط/مزدوج + أكسدة/اختزال (تقليدي/حديث).
+        </div>
+      </div>
+
+      <div class="grid" id="lessons"></div>
+    </section>
+
+    <section class="panel hidden" id="quiz">
+      <div class="hud">
+        <div class="hearts" id="hearts"></div>
+        <div class="bar"><div class="barin" id="barin"></div></div>
+        <div class="xp" id="xp">XP 0</div>
+      </div>
+
+      <div class="qcard">
+        <div class="qtitle" id="qtitle"></div>
+        <div class="qbody" id="qbody"></div>
+        <div class="qactions" id="qactions"></div>
+      </div>
+
+      <div class="foot">
+        <button class="btn" id="check">تحقق</button>
+        <button class="btn ghost" id="skip">تخطي</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast hidden" id="toast"></div>
+
+  <script src="chemistry.js"></script>
+</body>
+</html>

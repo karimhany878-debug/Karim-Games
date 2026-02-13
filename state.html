@@ -1,0 +1,157 @@
+﻿<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>State 2P Local (V2)</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="state_mobile.css" />
+</head>
+<body>
+
+  <div class="topMini">
+    <div class="brand">STATE 2P  V2</div>
+    <div class="miniBtns">
+      <button id="btnBack">Back</button><button id="btnNew">New</button>
+      <button id="btnPause">Pause</button>
+      <button id="btnHelp">Help</button>
+    </div>
+  </div>
+
+  <main class="stage">
+    <canvas id="game"></canvas>
+    <div id="mobilePlayBar" class="mobilePlayBar">
+      <button id="btnPlay">PLAY</button>
+      <button id="btnUI">UI</button>
+    </div>
+    <div id="toast" class="toast hidden"></div>
+
+    <!-- Single modal (never double overlays) -->
+    <div id="modal" class="overlay hidden">
+      <div class="card">
+        <div id="modalTitle" class="winner">Title</div>
+        <div id="modalText" class="sub">Text</div>
+        <div class="row">
+          <button id="btnModalA">OK</button>
+          <button id="btnModalB">Close</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="bottomHud">
+    <div class="panel p1">
+      <div class="head"><span class="dot"></span> P1</div>
+      <div class="meta">Nodes: <b id="p1Nodes">0</b> | Troops: <b id="p1Troops">0</b></div>
+      <div class="sel">Selected: <b id="p1Sel">-</b></div>
+      <div class="tools">
+        <button id="p1All" class="mini">Select All</button>
+        <button id="p1Clr" class="mini">Clear</button>
+      </div>
+      <div class="upRow">
+        <select id="p1UpType">
+          <option value="cap" selected>Cap</option>
+          <option value="grow">Growth</option>
+          <option value="spd">Speed</option>
+          <option value="shd">Shield</option>
+        </select>
+        <button id="p1Up" class="upBtn">Upgrade</button>
+      </div>
+      <div class="cost" id="p1UpCost">Cost: -</div>
+    </div>
+
+    <div class="center">
+      <div class="row2">
+        <label class="mode">
+          <span>Mode</span>
+          <select id="actionMode">
+            <option value="attack" selected>Attack</option>
+            <option value="transfer">Transfer (Give)</option>
+          </select>
+        </label>
+
+        <label class="mode">
+          <span>Rules</span>
+          <select id="ruleMode">
+            <option value="classic" selected>Classic Path</option>
+            <option value="direct">Direct Link</option>
+          </select>
+        </label>
+
+        <label class="mode">
+          <span>Match</span>
+          <select id="matchMode">
+            <option value="friend" selected>VS Friend</option>
+            <option value="bot">VS Bot</option>
+          </select>
+        </label>
+
+        <label class="mode" id="botBox">
+          <span>Bot</span>
+          <select id="botSelect">
+            <option value="easy">Easy</option>
+            <option value="normal" selected>Normal</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="sliderRow">
+        <div class="sliderLabel">Tap Send %</div>
+        <input id="tapFrac" type="range" min="0.20" max="0.85" step="0.05" value="0.55" />
+        <div class="sliderVal" id="tapFracVal">55%</div>
+      </div>
+
+      <div class="row2">
+        <button id="btnSound" class="pill">Sound: ON</button>
+        <input id="vol" class="vol" type="range" min="0" max="1" step="0.05" value="0.35" />
+        <div class="smallHint">
+          PC: Click=Single  Shift+Click=Multi  1/2 يحدد لاعب الماوس<br/>
+          Touch: Tap=Single  Long-Press=Toggle Multi
+        </div>
+      </div>
+    </div>
+
+    <div class="panel p2">
+      <div class="head"><span class="dot"></span> <span id="p2Label">P2</span></div>
+      <div class="meta">Nodes: <b id="p2Nodes">0</b> | Troops: <b id="p2Troops">0</b></div>
+      <div class="sel">Selected: <b id="p2Sel">-</b></div>
+      <div class="tools">
+        <button id="p2All" class="mini">Select All</button>
+        <button id="p2Clr" class="mini">Clear</button>
+      </div>
+      <div class="upRow">
+        <select id="p2UpType">
+          <option value="cap" selected>Cap</option>
+          <option value="grow">Growth</option>
+          <option value="spd">Speed</option>
+          <option value="shd">Shield</option>
+        </select>
+        <button id="p2Up" class="upBtn">Upgrade</button>
+      </div>
+      <div class="cost" id="p2UpCost">Cost: -</div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+  <script src="break.js"></script>
+  <script id="btnBackHandlerV1">
+    (function(){
+      const b=document.getElementById('btnBack');
+      if(b){ b.onclick=()=>{ location.href='index.html'; }; }
+    })();
+  </script>
+  <script src="state_patch.js"></script>
+  <script src="sfx.js"></script>
+  <script src="state_sound_patch.js"></script>
+  <script src="state_mobile.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

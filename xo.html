@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>XO</title>
+  <link rel="stylesheet" href="xo.css"/>
+</head>
+<body>
+  <header class="top">
+    <a class="btn" href="play.html">Back</a>
+    <div class="t">XO</div>
+    <div class="right">
+      <select id="mode">
+        <option value="friend" selected>VS Friend</option>
+        <option value="bot">VS Bot</option>
+      </select>
+      <select id="level">
+        <option value="easy">Easy</option>
+        <option value="normal" selected>Normal</option>
+        <option value="hard">Hard</option>
+      </select>
+      <button id="new" class="btn">New</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="info">
+      <div id="turn">Turn: X</div>
+      <div id="score">X: 0  O: 0</div>
+      <div id="hint" class="hint"></div>
+    </div>
+
+    <div id="grid" class="grid" aria-label="xo grid"></div>
+  </main>
+
+  <script src="xo.js"></script>
+</body>
+</html>
+

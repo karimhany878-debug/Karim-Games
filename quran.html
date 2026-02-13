@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <title>القرآن الكريم</title>
+  <link rel="stylesheet" href="app.css"/>
+  <link rel="stylesheet" href="start.css"/>
+  <link rel="stylesheet" href="quran.css"/>
+</head>
+<body>
+  <div id="toast" class="toast hidden"></div>
+
+  <header class="top">
+    <div class="t1">القرآن الكريم</div>
+    <div class="t2">نص كامل (Offline) + تلاوة المؤمنون كتجربة</div>
+  </header>
+
+    <main class="wrapQ">
+    <div class="rowQ">
+      <a class="btnQ" href="index.html">رجوع</a>
+      <a class="btnQ" href="read.html">Read</a>
+      <button class="smallBtn" id="btnTop">أعلى</button>
+    </div>
+
+    <section class="panelQ">
+      <div class="controls">
+        <div class="left">
+          <select id="surah" aria-label="السورة"></select>
+          <select id="viewMode" aria-label="العرض">
+            <option value="cards">بطاقات</option>
+            <option value="mushaf">مصحف (نص متصل)</option>
+          </select>
+        </div>
+        <div class="right" style="flex:1">
+          <input id="search" placeholder="بحث داخل النص (بدون نت)..." autocomplete="off"/>
+          <button class="smallBtn" id="btnSearch">بحث</button>
+          <button class="smallBtn ghost" id="btnClear">مسح</button>
+        </div>
+      </div>
+      <div style="margin-top:10px"><small>ملاحظة: البسملة تظهر كسطر مستقل (ما عدا الفاتحة والتوبة).</small></div>
+    </section>
+
+    <section style="margin-top:12px">
+      <div class="panelQ" style="padding:12px">
+        <div id="surahTitle" class="badge" style="font-size:13px; font-weight:900">سورة</div>
+      </div>
+      <div id="results" style="margin-top:12px"></div>
+      <div id="content" style="margin-top:12px"></div>
+    </section>
+  </main>
+
+  <script src="quran.js"></script>
+</body>
+</html>

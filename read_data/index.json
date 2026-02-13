@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "quran",
+      "title": "القرآن الكريم",
+      "icon": "quran",
+      "hint": "قراءة + بحث (Offline)",
+      "page": "quran.html",
+      "time": []
+    },
+    {
+      "id": "quran_dua",
+      "title": "أدعية من القرآن",
+      "icon": "quran",
+      "hint": "مختارات قصيرة",
+      "file": "quran_dua.json",
+      "time": []
+    },
+    {
+      "id": "prophetic_dua",
+      "title": "أدعية نبوية",
+      "icon": "dua",
+      "hint": "مختارات",
+      "file": "prophetic_dua.json",
+      "time": []
+    },
+    {
+      "id": "jawami",
+      "title": "جوامع الدعاء",
+      "icon": "star",
+      "hint": "قصير جامع",
+      "file": "jawami.json",
+      "time": []
+    }
+  ]
+}

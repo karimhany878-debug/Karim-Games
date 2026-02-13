@@ -1,0 +1,25 @@
+﻿.wrap{max-width:980px;margin:0 auto;padding:22px 16px}
+.hero{padding:16px 14px}
+.brand{font-weight:980;letter-spacing:1px;font-size:22px}
+.sub{color:var(--muted);margin-top:6px;font-size:12px}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:12px;
+  margin-top:14px;
+}
+.card{
+  text-decoration:none;
+  color:var(--text);
+  padding:16px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.06);
+  box-shadow:0 14px 44px rgba(0,0,0,.25);
+  transition:transform .12s ease, background .12s ease;
+}
+.card:hover{transform:translateY(-2px);background:rgba(255,255,255,.10)}
+.card.primary{border-color:var(--good)}
+.h{font-weight:980;font-size:20px}
+.p{margin-top:8px;color:var(--muted);line-height:1.6;font-size:13px}
+.foot{margin-top:14px;color:var(--muted);font-size:12px}

@@ -1,0 +1,105 @@
+﻿<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>READ</title>
+  <link rel="stylesheet" href="app.css"/>
+  <link rel="stylesheet" href="start.css"/>
+  <link rel="stylesheet" href="read.css"/>
+</head>
+<body>
+  <div id="toast" class="toast hidden"></div>
+
+  <div class="wrap">
+    <header class="glass hero">
+      <div class="rowTop">
+        <a class="btn" href="index.html">Back</a>
+        <div class="brand">READ</div>
+        <a class="btn" href="play.html">Play</a>
+      </div>
+      <div class="sub">قرآن  أذكار  أدعية  سنة  بحث + مفضلة + توصية حسب الوقت</div>
+      <div class="cards" style="margin-top:12px">
+        <a class="card" href="adhkar_morning.html"><div class="h">أذكار الصباح</div><div class="p">صفحة مستقلة</div></a>
+        <a class="card" href="adhkar_evening.html"><div class="h">أذكار المساء</div><div class="p">صفحة مستقلة</div></a>
+        <a class="card" href="adhkar_sleep.html"><div class="h">أذكار النوم</div><div class="p">صفحة مستقلة</div></a>
+        <a class="card" href="adhkar_after_prayer.html"><div class="h">أذكار بعد الصلاة</div><div class="p">صفحة مستقلة</div></a>
+        <a class="card" href="adhkar_istiftah.html"><div class="h">أدعية الاستفتاح</div><div class="p">مهم قبل القراءة</div></a>
+        <a class="card" href="adhkar_wudu.html"><div class="h">أذكار الوضوء</div><div class="p">صفحة مستقلة</div></a>
+        <a class="card" href="adhkar_travel.html"><div class="h">أذكار السفر</div><div class="p">صفحة مستقلة</div></a>
+        <a class="card" href="adhkar_food.html"><div class="h">أذكار الطعام</div><div class="p">صفحة مستقلة</div></a>
+        <a class="card" href="adhkar_mosque.html"><div class="h">أذكار المسجد</div><div class="p">صفحة مستقلة</div></a>
+        <a class="card" href="book_alf_sunnah_1000.html"><div class="h">كتاب: الألف سنة</div><div class="p">PDF Offline</div></a>
+      </div>
+
+      <div class="chips" id="chips"></div>
+      <div class="search">
+        <input id="search" placeholder="ابحث (آية / ذكر / دعاء / حديث)..." autocomplete="off"/>
+        <button id="btnClear" class="btn">مسح</button>
+      </div>
+    </header>
+
+    <main>
+
+    <a class="card primary" href="quran.html" style="margin-bottom:12px; display:block; text-decoration:none;">
+      <div class="cat">
+        <div class="ico">📖</div>
+        <div class="txt">
+          <div class="h">القرآن الكريم</div>
+          <div class="p">قراءة + بحث + تلاوة المؤمنون (كتجربة)</div>
+        </div>
+      </div>
+    </a>
+      <div class="grid" id="cats"></div>
+    </main>
+  </div>
+
+  <div id="reader" class="modal hidden">
+    <div class="glass modalBox">
+      <div class="modalTop">
+        <div class="mTitle" id="mTitle"></div>
+        <button class="btn" id="btnClose">Close</button>
+      </div>
+
+      <div class="mControls">
+        <button class="btn" id="btnPrev">Prev</button>
+        <button class="btn" id="btnNext">Next</button>
+        <button class="btn" id="btnShuffle">Shuffle</button>
+        <button class="btn" id="btnFav"></button>
+        <button class="btn" id="btnCopy">Copy</button>
+        <button class="btn" id="btnIndex">فهرس</button>
+      </div>
+
+      <div class="mMeta">
+        <div id="mProg" class="muted">0/0</div>
+        <div id="mTag" class="tag"></div>
+      </div>
+
+      <div class="mBody">
+        <div class="mText" id="mText"></div>
+        <div class="mRef muted" id="mRef"></div>
+        <div class="mRepeat muted" id="mRepeat"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="indexModal" class="modal hidden">
+    <div class="glass modalBox">
+      <div class="modalTop">
+        <div class="mTitle">فهرس</div>
+        <button class="btn" id="btnIndexClose">Close</button>
+      </div>
+
+      <div class="search">
+        <input id="idxSearch" placeholder="بحث داخل القسم..." autocomplete="off"/>
+        <button id="btnIdxClear" class="btn">مسح</button>
+      </div>
+
+      <div class="idxList" id="idxList"></div>
+    </div>
+  </div>
+
+  <script src="sfx.js"></script>
+  <script src="read.js"></script>
+</body>
+</html>

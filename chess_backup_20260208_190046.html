@@ -1,0 +1,72 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Chess</title>
+  <link rel="stylesheet" href="chess.css"/>
+</head>
+<body>
+  <header class="top glass">
+    <a class="btn" href="play.html">Back</a>
+
+    <div class="mid">
+      <div class="ttl">CHESS</div>
+      <div class="sub" id="sub"></div>
+    </div>
+
+    <div class="right">
+      <select id="mode">
+        <option value="friend" selected>VS Friend</option>
+        <option value="bot">VS Bot</option>
+      </select>
+
+      <select id="lvl">
+        <option value="easy">Easy</option>
+        <option value="normal" selected>Normal</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <select id="pset" title="Piece Model">
+        <option value="pirouetti" selected>Pirouetti</option>
+        <option value="merida">Merida</option>
+        <option value="staunton">Staunton</option>
+        <option value="tatiana">Tatiana</option>
+        <option value="alpha">Alpha</option>
+        <option value="cburnett">Cburnett</option>
+      </select>
+
+      <button class="btn" id="flip">Flip</button>
+      <button class="btn" id="undo">Undo</button>
+      <button class="btn" id="new">New</button>
+    </div>
+  </header>
+
+  <main class="stage">
+    <section class="boardWrap glass">
+      <canvas id="cv"></canvas>
+    </section>
+
+    <aside class="side glass">
+      <div class="row">
+        <div class="pill"><div class="k">Turn</div><div class="v" id="turn"></div></div>
+        <div class="pill"><div class="k">Eval</div><div class="v" id="eval">0.00</div></div>
+      </div>
+
+      <div class="cap">
+        <div class="capH">White lost</div>
+        <div class="capRow" id="wLost"></div>
+      </div>
+
+      <div class="cap">
+        <div class="capH">Black lost</div>
+        <div class="capRow" id="bLost"></div>
+      </div>
+
+      <div class="hint" id="hint">Tap piece  tap destination</div>
+    </aside>
+  </main>
+
+  <script src="chess.js"></script>
+</body>
+</html>
